@@ -1,0 +1,10 @@
+<% @user_ideas = @ideas.select do |idea| %>
+<% idea.user_id == current_user.id %>
+<% end %>
+
+<% @user_ideas.each do |idea| %>
+<h1> <%= idea.name %> </h1>
+<h3><%= idea.description %></h3><br>
+<% end %>
+
+<%= link_to "Back to Dashboard", user_path(current_user.id) %>

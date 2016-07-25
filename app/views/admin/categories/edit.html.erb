@@ -1,0 +1,7 @@
+<h1> Edit Category </h1>
+
+<%= form_for @category, url: admin_category_path do |f| %>
+<%= f.text_field :title,  placeholder: "Title" %>
+<%= f.text_field :description,  placeholder: "Description (Optional)" %>
+<%= f.submit "Submit Category"%>
+<% end %>

@@ -1,0 +1,8 @@
+<h1> Welcome, <%= @user.username %>!</h1>
+
+<%= link_to "Add New Idea", new_idea_path %><br>
+<%= link_to "See all of your ideas", ideas_path %><br>
+<%if current_admin? %>
+<%= link_to "Categories Menu", admin_categories_path %><br>
+<% end %>
+<%= link_to "Logout", logout_path, method: :delete %>
